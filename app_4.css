@@ -1,0 +1,15 @@
+@charset "utf-8";
+*{margin:0px;padding:0px;outline: none;}
+/*===start body===*/
+body{background-color:rgb(222, 222, 222);font-family: 'consolas';}
+/*===end body===*/
+/*===start section===*/
+body form{min-width: 400px;min-height: 70px;position: fixed;transform: translate(-50%,-50%);top:50%;left: 50%;background-color: #fff;display: flex;justify-content: center;padding: 20px;align-items: center;}
+
+body form input{width: 90%; height: 50px;display:flex;justify-content: center;align-items: center;border: none;border-bottom: 3px solid #d6d6d6;font-size: 18px;}
+
+body form label{position: absolute;left: 40px;bottom: 46px;transition: transform 0.5s;pointer-events: none;color:#8a8a8a;}
+
+body form .border{position: absolute; width: 360px;height: 3px;bottom: 28px;left: 40px; background-color: deepskyblue;transition:background-color 1s;transform: scaleX(0);transition-timing-function: ease;}
+body form > input:focus + label {transform:translate(-1px,-25px) scale(0.95);transition:transform 0.5s;color: #00b4ff;text-shadow: -1px 1px black;}
+body form > input:focus + label + .border{transform: scaleY(1);transition:transform 1s;}
